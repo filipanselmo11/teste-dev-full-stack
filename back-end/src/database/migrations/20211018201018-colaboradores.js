@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up:(queryInterface, Sequelize) => {
+  up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('colaboradores', {
       id: {
         type: Sequelize.INTEGER,
@@ -9,32 +9,57 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
+
       cpf: {
         type: Sequelize.STRING,
         allowNull: false,
       },
+
       nome: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      setor: {
+
+      cargo: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
 
-      created_at : {
+      codigo_setor: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'setores', key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
+
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
 
-      updated_at : {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
     });
   },
 
-  down:(queryInterface, Sequelize) => {
+  down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('colaboradores')
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+

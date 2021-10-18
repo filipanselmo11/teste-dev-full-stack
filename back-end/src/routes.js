@@ -2,6 +2,9 @@ const express = require('express');
 
 const ColaboradorController = require('./controllers/ColaboradorController');
 
+const SetorController = require('./controllers/SetorController');
+
+
 const routes = express.Router();
 
 routes.post('/colaboradores', ColaboradorController.create);
@@ -15,5 +18,9 @@ routes.put('/colaboradores/:id', ColaboradorController.update);
 routes.delete('/colaboradores/:id', ColaboradorController.delete);
 
 routes.delete('/colaboradores', ColaboradorController.deleteAll);
+
+routes.get('/setores', SetorController.index);
+
+
 
 module.exports = routes;
