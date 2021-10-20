@@ -1,27 +1,26 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CriarColaboradorComponent } from './components/criar-colaborador/criar-colaborador.component';
-import { DetalharColaboradorComponent } from './components/detalhar-colaborador/detalhar-colaborador.component';
-import { ListarColaboradorComponent } from './components/listar-colaborador/listar-colaborador.component';
-
+import { CriarComponent } from './components/colaborador/criar/criar.component';
+import { ListarComponent } from './components/colaborador/listar/listar.component';
+import { DetalharComponent } from './components/colaborador/detalhar/detalhar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CriarColaboradorComponent,
-    DetalharColaboradorComponent,
-    ListarColaboradorComponent,
+    CriarComponent,
+    ListarComponent,
+    DetalharComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

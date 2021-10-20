@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ColaboradorService } from '../../service/colaborador.service';
+import { ColaboradorService } from 'src/app/service/colaborador.service'; 
 
 @Component({
-  selector: 'app-criar-colaborador',
-  templateUrl: './criar-colaborador.component.html',
-  styleUrls: ['./criar-colaborador.component.css']
+  selector: 'app-criar',
+  templateUrl: './criar.component.html',
+  styleUrls: ['./criar.component.css']
 })
-export class CriarColaboradorComponent implements OnInit {
-
+export class CriarComponent implements OnInit {
 
   colaborador = {
     nome: '',
@@ -49,3 +48,4 @@ export class CriarColaboradorComponent implements OnInit {
     }
   };
 }
+

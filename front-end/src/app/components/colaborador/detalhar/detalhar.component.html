@@ -1,0 +1,39 @@
+<div class="mt-4" style="width:400px; margin: auto;">
+    <div *ngIf="mensagem !== ''" class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ mensagem }}
+        <button type="button" (click)="setMessage()" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div *ngIf="atualColaborador" class="edit-form">
+        <form>
+            <div class="form-group row">
+                <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" [(ngModel)]="atualColaborador.nome" name="nome"/>
+            </div>
+            <div class="form-group row">
+                <label for="cpf" class="col-sm-2 col-form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" [(ngModel)]="atualColaborador.cpf" name="cpf"/>
+            </div>
+            <div class="form-group row">
+                <label for="setor" class="col-sm-2 col-form-label">Setor</label>
+                <input type="text" class="form-control" id="setor" [(ngModel)]="atualColaborador.setor" name="setor"/>
+            </div>
+        </form>
+
+        <button class="btn btn-danger mr-2" (click)="deletarColaborador()">
+            Deletar
+        </button>
+
+        <button type="submit" class="btn btn-succes" (click)="atualizarColaborador()">
+            Atualizar
+        </button>
+    </div>
+
+    <div *ngIf="!atualColaborador">
+        <br/>
+        <div class="alert alert-warning" role="alert">
+            Não foi possível acessar o colaborador.
+        </div>
+    </div>
+</div>

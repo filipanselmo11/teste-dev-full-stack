@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-import { CriarColaboradorComponent } from './components/criar-colaborador/criar-colaborador.component';
-import { DetalharColaboradorComponent } from './components/detalhar-colaborador/detalhar-colaborador.component';
-import { ListarColaboradorComponent } from './components/listar-colaborador/listar-colaborador.component';
-
+import { CriarComponent } from './components/colaborador/criar/criar.component';
+import { DetalharComponent } from './components/colaborador/detalhar/detalhar.component';
+import { ListarComponent } from './components/colaborador/listar/listar.component';
 const routes: Routes = [
   { path: '', redirectTo: 'colaboradores', pathMatch: 'full'},
-  { path: 'colaboradores', component: ListarColaboradorComponent },
-  { path: 'colaboradores/:id', component: DetalharColaboradorComponent },
-  { path: 'criar', component: CriarColaboradorComponent }
+  { path: 'colaboradores', component: ListarComponent },
+  { path: 'colaboradores/:id', component: DetalharComponent },
+  { path: 'criar', component: CriarComponent }
   
 ];
 

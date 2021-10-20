@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ColaboradorService } from 'src/app/service/colaborador.service';
-
+import { ColaboradorService } from 'src/app/service/colaborador.service'; 
 
 @Component({
-  selector: 'app-listar-colaborador',
-  templateUrl: './listar-colaborador.component.html',
-  styleUrls: ['./listar-colaborador.component.css']
+  selector: 'app-listar',
+  templateUrl: './listar.component.html',
+  styleUrls: ['./listar.component.css']
 })
-
-export class ListarColaboradorComponent implements OnInit {
+export class ListarComponent implements OnInit {
 
   colaboradores = [];
   atualColaborador = null;
@@ -71,16 +69,5 @@ export class ListarColaboradorComponent implements OnInit {
     );
   }
 
-  /*procurarColaboradorSetor(): void {
-    this.colaboradorService.findBySetor(this.setor).subscribe(
-      data => {
-        this.colaboradores = data;
-        console.log(data);
-      },
-      error => {
-        console.log(error);
-      }
-    );
-  }*/
 
 }
