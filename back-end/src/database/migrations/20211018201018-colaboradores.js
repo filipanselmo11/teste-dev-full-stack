@@ -20,21 +20,11 @@ module.exports = {
         allowNull: false,
       },
 
-      cargo: {
+      setor: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
-
-      codigo_setor: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'setores', key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-      },
-
+      
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

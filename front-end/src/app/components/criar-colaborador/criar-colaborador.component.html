@@ -1,0 +1,24 @@
+<div class="mt-4" style="width: 400px; margin: auto;">
+    <div *ngIf="!submitted">
+        <div class="form-group row">
+            <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="colaborador.nome" name="nome" />
+        </div>
+        <div class="form-group row">
+            <label for="cpf" class="col-sm-2 col-form-label">Cpf</label>
+            <input class="form-control" id="cpf" required [(ngModel)]="colaborador.cpf" name="cpf" />
+        </div>
+        <div class="form-group row">
+            <label for="setor" class="col-sm-2 col-form-label">Setor</label>
+            <input class="form-control" id="setor" required [(ngModel)]="colaborador.setor" name="setor"/>
+        </div>
+
+        <button (click)="criarColaborador()" class="btn btn-success">Criar</button>
+    </div>
+    <div *ngIf="submitted">
+        <div class="alert alert-success" role="alert">
+            O colaborador foi criado com sucesso
+        </div>
+        <button class="btn btn-success" (click)="novoColaborador()">Novo Colaborador</button>
+    </div>
+</div>
